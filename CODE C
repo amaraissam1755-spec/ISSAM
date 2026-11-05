@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+    float value, result;
+
+    printf("Choose a conversion:\n");
+    printf("1. Meters to Feet\n");
+    printf("2. Grams to Pounds\n");
+    printf("3. Celsius to Fahrenheit\n");
+
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    printf("Enter the value: ");
+    scanf("%f", &value);
+
+    switch (choice)
+    {
+        case 1:
+            result = value / 0.3048;
+            printf("%.2f meters = %.2f feet\n", value, result);
+            break;
+
+        case 2:
+            result = value * 0.002205;
+            printf("%.2f grams = %.2f pounds\n", value, result);
+            break;
+
+        case 3:
+            result = 32 + (1.8 * value);
+            printf("%.2f Celsius = %.2f Fahrenheit\n", value, result);
+            break;
+
+        default:
+            printf("Invalid choice!\n");
+    }
+
+    return 0;
+}
